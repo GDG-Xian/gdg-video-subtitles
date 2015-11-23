@@ -45,32 +45,32 @@ is the new CPU monitor.
 
 10
 00:00:20,590 --> 00:00:23,590
-这些工具可以让你直观地看到你的app运行状况
+这些工具给了你一个全貌  让你可以
 These tools give you an overview of how running your app
 
 11
 00:00:23,590 --> 00:00:27,340
-以及它对硬件设备的影响  因此可以让你很容易察觉到性能问题
+看到你的程序对设备的影响  因此能让你尽早发现性能问题  
 is affecting the device so you can spot performance problems early.
 
 12
 00:00:27,340 --> 00:00:29,550
-你如果想得到更详细的信息
+如果想得到更详细的信息
 If you need to get more detailed information,
 
 13
 00:00:29,550 --> 00:00:31,900
-你可以现在就进行Allocation Tracking
+你可以现在就进行追踪对象的调配情况
 you can now start Tracking Object allocations,
 
 14
 00:00:31,900 --> 00:00:34,390
-或者初始化一段memory dump用作稍后分析
+或者初始化一段内存副本用作稍后分析
 initiate a memory dump for later analysis,
 
 15
 00:00:34,390 --> 00:00:38,480
-甚至还可以直接从IDE中调用method  进行method tracing  
+甚至还可以直接从IDE中调用方法  进行方法追踪
 and even start tracing method calls straight from the IDE.
 
 16
@@ -85,32 +85,32 @@ pane for quick access to any reports that you've created.
 
 18
 00:00:44,170 --> 00:00:46,960
-它将变得非常有用  当你试图去发现内存泄露  
+当你试图去发现内存泄露  或者想找到你app的核心性能组件的时候  它将变得非常有用  
 They can be useful when you're trying to find memory leaks
 
 19
 00:00:46,960 --> 00:00:51,000
-或者想找到你app的核心部分时 
+当你试图去发现内存泄露  或者想找到你app的核心性能组件的时候  它将变得非常有用
 or identify performance critical sections of your app.
 
 20
 00:00:51,000 --> 00:00:53,910
-但如果知道这些就更好了  比如直接找出内存泄露
+但如果能直接找出内存泄露来自哪里  
 But you know what's even better for figuring out where a memory
 
 21
 00:00:53,910 --> 00:00:56,810
-来自哪里  或者知道与你所创建的对象
+或者知道与你所创建的对象
 leak comes from, knowing which pieces of code
 
 22
 00:00:56,810 --> 00:00:59,350
-相关的代码是哪些  以防止它们
+相关的代码是哪些  以防止它们被当成垃圾回收  就更好了
 hold references to your objects, preventing them
 
 23
 00:00:59,350 --> 00:01:01,310
-被当成垃圾回收
+相关的代码是哪些  以防止它们被当成垃圾回收  就更好了
 from being garbage collected.
 
 24
@@ -120,7 +120,7 @@ You can see that information instantly
 
 25
 00:01:03,350 --> 00:01:05,550
-通过life debugging session获知
+通过调试会话的生命周期获知  
 during a life debugging session.
 
 26
@@ -130,7 +130,7 @@ First, start your app using the debug button
 
 27
 00:01:08,070 --> 00:01:09,820
-或者在代码中间运行
+或者附加到一个写进程中
 or attach to a writing process.
 
 28
@@ -140,17 +140,17 @@ After a successful connection, the IDE
 
 29
 00:01:12,490 --> 00:01:16,260
-程序将会停在有断点的地方
+IDE将会停在有断点的地方
 will pause execution on any break points that you specify.
 
 30
 00:01:16,260 --> 00:01:19,330
-你现在可以选择Show referring objects选项
+你现在可以在任何当前变量上  选择Show referring objects指令  去获得你所需要的详细信息
 Your can now select the Show referring objects command
 
 31
 00:01:19,330 --> 00:01:22,840
-从任何当前变量中获知你所需要的信息
+你现在可以在任何当前变量上  选择Show referring objects指令  去获得你所需要的详细信息
 on any of the current variables to get the info you need.
 
 32
@@ -215,7 +215,7 @@ One of the other nifty features that come with Android Studio
 
 44
 00:01:56,610 --> 00:01:59,280
-局部变量的值会显示在同一行的右方当debugging时  
+在调试状态下  局部变量的值会显示在编译器中同一行的右方
 right there in the Code Editor when debugging.
 
 45
@@ -245,12 +245,12 @@ to inspect them in more detail.
 
 50
 00:02:13,160 --> 00:02:15,230
-但是你也知道  debugging最难的部分
+但是你也知道  调试最难的部分
 But you know what the worst thing about debugging
 
 51
 00:02:15,230 --> 00:02:17,900
-就是debugging本身
+就是调试本身
 is, it's the debugging itself.
 
 52
@@ -275,7 +275,7 @@ Whether you're doing test-driven development
 
 56
 00:02:30,620 --> 00:02:33,010
-还是仅仅只想快速地测试你的程序
+还是仅仅想快速地测试你的程序
 or just want to test your code quickly,
 
 57
@@ -295,7 +295,7 @@ Starting from Android Studio 1.1,
 
 60
 00:02:41,380 --> 00:02:43,860
-他们可以支持使用local JVM在你的开发中
+它们可以支持使用local JVM在你的开发中
 there is support for running unit tests on your development
 
 61
@@ -315,12 +315,12 @@ in the test folder on your Android module.
 
 64
 00:02:52,590 --> 00:02:54,260
-Gradle将会创建一个特殊版本的
+当你运行测试程序时  Gradle将会创建一个特殊版本的Android JAR到类路径中
 Gradle will create a special version
 
 65
 00:02:54,260 --> 00:02:58,070
-Android JAR到类路径中当你运行测试程序时
+当你运行测试程序时  Gradle将会创建一个特殊版本的Android JAR到类路径中
 of Android JAR in the class path when you run the test task.
 
 66
@@ -335,7 +335,7 @@ so you can't use any framework classes.
 
 68
 00:03:03,810 --> 00:03:05,935
-你应该使用常用的mocking库
+你应该使用流行的mocking库
 You should use one of the popular mocking libraries
 
 69
@@ -456,3 +456,4 @@ See ya.
 92
 00:04:07,622 --> 00:04:09,324
 [MUSIC PLAYING]
+
